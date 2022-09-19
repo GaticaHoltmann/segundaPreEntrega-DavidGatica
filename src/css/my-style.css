@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container-app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70vh 20vh;
+    grid-template-areas:
+        "main"
+        "footer";
+}
+
+
+#nav {
+    display: flex;
+    border-style: solid;
+    background: linear-gradient(to top, black, gray);
+    /* grid-area: nav; */
+    height: 10vh;
+}
+
+#nav input.toggle[type='checkbox'] {
+    display: none;
+}
+
+.lbl-toggle {
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+
+    transition: transform .2s ease-out;
+}
+
+.lbl-toggle:hover{
+    color: white;
+}
+
+.nav-menu{
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 1s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .nav-menu{
+    max-height: 100vh;
+}
+
+#main {
+    border-style: solid;
+    background: linear-gradient(to top, yellow, orange);
+    grid-area: main;
+}
+
+#footer {
+    border-style: solid;
+    background-color: black;
+    grid-area: footer;
+}
+
+@media screen and (min-width: 768px) {}
