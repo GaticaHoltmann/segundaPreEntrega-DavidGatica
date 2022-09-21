@@ -31,6 +31,7 @@
     padding: 1rem;
     cursor: pointer;
     margin-left: auto;
+    transition: all 1s ease;
 }
 
 .lbl-toggle::before {
@@ -46,6 +47,7 @@
     transform: translateY(-2px);
 
     transition: transform .2s ease-out;
+    /* credits https://css-tricks.com/snippets/css/css-triangle/ */
 }
 
 .lbl-toggle:hover{
@@ -53,13 +55,38 @@
 }
 
 .nav-menu{
+    display: flex;
     max-height: 0px;
+    height: 0px;
     overflow: hidden;
     transition: max-height 1s ease-in-out;
 }
 
+.nav-menu ul li {
+    border-style: solid;
+}
+
+.nav-menu ul li:hover{
+    background: linear-gradient(to bottom, black, gray);
+    color: white;
+}
+
+.toggle:checked + .lbl-toggle{
+    margin-left: 0px;
+    transition: all 1s ease;
+}
+
 .toggle:checked + .lbl-toggle + .nav-menu{
     max-height: 100vh;
+    z-index: 1;
+    background:linear-gradient(to top, black, gray);
+    height: 30vh;
+    width: 100vw;
+}
+
+.toggle:checked + .lbl-toggle + .nav-menu ul li{
+    width: 100vw;
+    height: 7vh;
 }
 
 #main {
