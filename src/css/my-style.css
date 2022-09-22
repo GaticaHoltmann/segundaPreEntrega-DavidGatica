@@ -84,9 +84,19 @@
 }
 
 #footer {
-    border-style: solid;
-    background-color: black;
+    background: linear-gradient(to top, rgba(194, 13, 0, 0.867), rgb(255, 123, 0));
     grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.fa-brands {
+    align-self: center;
+}
+
+.fa-solid {
+    align-self: center;
 }
 
 @media screen and (min-width: 768px) {}
