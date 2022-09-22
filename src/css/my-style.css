@@ -67,11 +67,12 @@
     background: rgba(194, 13, 0, 0.867);
     padding-top: 1rem;
 }
- .menu-option a{
+
+.menu-option a {
     text-decoration: none;
     color: white;
     font-weight: bold;
- }
+}
 
 .toggle:checked+.lbl-toggle+.nav-menu {
     max-height: 100vh;
@@ -97,6 +98,34 @@
 
 .fa-solid {
     align-self: center;
+}
+
+#images-sorter {
+    height: 100%;
+    animation-name: rotate-images;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@keyframes rotate-images {
+    0% {
+        background-image: url('../images/product1.jpg');
+    }
+
+    35% {
+        background-image: url('../images/product2.jpg');
+    }
+
+    75% {
+        background-image: url('../images/product3.jpg');
+    }
+
+    100% {
+        background-image: url('../images/product4.jpg');
+    }
 }
 
 @media screen and (min-width: 768px) {}
