@@ -118,6 +118,7 @@
     animation-iteration-count: infinite;
     animation-duration: 6s;
     background-repeat: round;
+    animation-timing-function: ease-in-out;
 }
 
 #container-products{
@@ -128,13 +129,14 @@
 }
 
 .product{
-    padding: 1rem
+    padding: 1rem;
 }
 
 .product img{
     margin: auto;
     width: 100%;
     height: auto;
+    border-radius: 2rem;
 }
 
 @keyframes rotate-images {
@@ -151,4 +153,107 @@
     }
 }
 
-@media screen and (min-width: 768px) {}
+@media screen and (min-width: 768px) {
+    #container-products{
+        flex-direction: row;
+    }
+
+    .product img{
+        height: 18vh;
+    }
+
+    #nav {
+        flex-direction: row;
+    }
+
+    #nav img#logo {
+        width: 30vw;
+        height: 20vh;
+    }
+
+    .nav-menu {
+        max-width: 0px;
+        text-align: center;
+        transition: max-width .15s ease;
+        list-style-type: none;
+    }
+
+    .toggle:checked+.lbl-toggle+.nav-menu {
+        max-width: 40vw;
+        z-index: 0;
+    }
+    #images-sorter{
+        height: 45vh;
+    }
+
+    .menu-option {
+        margin: auto;
+        height: 25vh;
+        background: rgba(194, 13, 0, 0.867);
+        padding-top: 1rem;
+        width: 40vw;
+        line-height: 25vh;
+        padding-top: 0%;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+    #container-app {
+        grid-template-rows: 10vh 80vh 10vh;
+        grid-template-areas:
+            "nav"
+            "main"
+            "footer";
+    }
+    #nav{
+        height: 10vh;
+        justify-content: space-between;
+    }
+    #nav img#logo {
+        /* width: 100%; */
+        height: 10vh;
+    }
+
+    #container-products{
+        flex-wrap: wrap;
+        width: 70vw;
+        margin: 0.3rem auto;
+    }
+    .product{
+        padding: 0%;
+        width: 49%;
+        display: flex;
+        justify-content: center;
+        margin: 2px;
+    }
+    .product img{
+        width: 95%;
+    }
+
+    #images-sorter{
+        height: 40vh;
+        width: 70vw;
+        margin: 0.3rem auto;
+    }
+
+    .lbl-toggle{
+        display: none;
+    }
+    .nav-menu {
+        max-width: 40vw;
+        text-align: center;
+        transition: max-width .15s ease;
+        list-style-type: none;
+    }
+    .nav-menu li:last-child{
+        margin-right: 2rem;
+    }
+    .menu-option{
+        display: inline;
+        background: none;
+        height: 10vh;
+        line-height: 10vh;
+    }
+}
