@@ -62,6 +62,7 @@
     text-align: center;
     transition: max-height .15s ease;
     text-transform: uppercase;
+    z-index: -1;
 }
 
 .menu-option {
@@ -96,6 +97,7 @@
     grid-area: footer;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 2rem;
 }
 
@@ -108,11 +110,13 @@
 .fa-brands {
     align-self: center;
     color: white;
+    padding: 2px;
 }
 
 .fa-solid {
     align-self: center;
     color: white;
+    padding: 2px;
 }
 
 #images-sorter {
@@ -255,6 +259,7 @@
         text-align: center;
         transition: max-width .15s ease;
         list-style-type: none;
+        z-index: 1;
     }
     .nav-menu li>a::after {
         position: absolute;
