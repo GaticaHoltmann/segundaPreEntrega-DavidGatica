@@ -197,6 +197,53 @@
     width: 80%;
 }
 
+.image-workus img {
+    width: 100%;
+}
+
+.brief-invite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.card-schedule{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-style: solid;
+    border-radius: 1rem;
+}
+
+.card-schedule img{
+    width: 100%;
+    border-radius: 1rem;
+    margin: 10px;
+}
+
+.container-contact{
+    padding: 10px;
+
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input[type=text],input[type=email]{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid black;
+    height: 1.5rem;
+}
+
+.contact-form textarea{
+    border: 0;
+}
 
 
 
@@ -437,17 +484,35 @@
         width: 30vw;
     }
 
-    /* .container-options{
-        flex-direction: row;
-        flex-wrap:wrap;
-        justify-content: space-around;
-    } */
-
     .preview-option{
-        width: 40vw;
+        width: 30vw;
     }
 
     .preview-option img{
         width: 35vw;
+    }
+
+    .image-workus{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-workus img{
+        width: 80%;
+        height: 30vh;
+    }
+
+    .work-container{
+        display: flex;
+        direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-schedule{
+        width: 40%;
+        height: 30vh;
+        border-style: none;
     }
 }
